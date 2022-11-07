@@ -1,337 +1,226 @@
-<!doctype html>
+<!DOCTYPE HTML>
 <html>
-<head>  
-  
+<head><title>Saya Gerson</title>
+<!-- Created By L3M4R1 -->
+<script>alert ('HAI')
+alert ('SAYA GERSON YANG PENGEN MENGENALI MU LEBIH DALAM')</script>
+<script language="JavaScript"> 
  
-		<title>FIRA GALERY</title>
-                    
-
- 
- <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700i" rel="stylesheet">
-		<style>
- 
-body{    
-    font-family: 'Roboto Condensed', sans-serif;
-    overflow-x: hidden;
-    
+function tb5_makeArray(n){
+ this.length = n;
+ return this.length;
 }
-        body { background-image: url(download.jpg);}
-        h1 { margin:150px auto 30px auto; text-align:center; color:#fff;}
-   
-            .hi-slide { position: relative; width: 754px; height: 292px; margin: 115px auto 0; }
-            
-.hi-slide .hi-next,
-.hi-slide .hi-prev 
-            { position: absolute;
-              top: 50%; 
-              width: 40px;
-              height: 40px; 
-              margin-top: -20px;     
-                border-radius: 50px; 
-                 
-                
-              line-height: 40px;
-              text-align: center; 
-              cursor: pointer;
-              background-color: #fff; 
-              color: black;               
-              transition: all 0.6s;
-              font-size: 20px; 
-                font-weight: bold;
-            }
-           .hi-slide .hi-next:hover, 
-            .hi-slide .hi-prev:hover 
-            {
-            opacity: 1; 
-            background-color: #fff;  
-            }
-            
-           .hi-slide .hi-prev { left: -60px; }
-            
-    .hi-slide .hi-prev::before { content: '<'; }
-    .hi-slide .hi-next { right: -60px; }
-    .hi-slide .hi-next::before { content: '>'; }
-    
-            .hi-slide > ul
-                    { 
-                        list-style: none; 
-                        position: relative;
-                        width: 754px; 
-                        height: 292px; 
-                        margin: 0;
-                        padding: 0;
-            }
-            
-            
-        .hi-slide > ul > li {
-            overflow: hidden; 
-            position: absolute; 
-            z-index: 0; 
-            left: 377px;
-            top: 146px; 
-            width: 0; 
-            height: 0; 
-            margin: 0; 
-            padding: 0;
-            border: 3px solid #fff;              
-            background-color: #333; 
-            cursor: pointer; }
-            
-        .hi-slide > ul > li > img { width: 100%; height: 100%; background-position: center;}
-
  
+tb5_messages = new tb5_makeArray(7);
+tb5_messages[0] = "Hay ";
+tb5_messages[1] = "Aku Mau Kamu Tau";
+tb5_messages[2] = "kalau Aku Suka Sama Kamu";
+tb5_messages[3] = "Aku Serius nich";
+tb5_messages[4] = "Kamu Mau Ngga Jadi Teman ku";
+tb5_messages[5] = "Aku berharap kamu mau ya..";
+tb5_messages[6] = "Ilopeyu!!!";
+tb5_rptType = 'infinite';
+tb5_rptNbr = 20;
+tb5_speed = 30;
+tb5_delay = 2000;
+var tb5_counter=2;
+var tb5_currMsg=0;
+var tb5_stsmsg="";
+function tb5_shuffle(arr){
+var k;
+for (i=0; i<arr.length; i++){
+ k = Math.round(Math.random() * (arr.length - i - 1)) + i;
+ temp = arr[i];arr[i]=arr[k];arr[k]=temp;
+}
+return arr;
+}
+tb5_arr = new tb5_makeArray(tb5_messages[tb5_currMsg].length);
+tb5_sts = new tb5_makeArray(tb5_messages[tb5_currMsg].length);
+for (var i=0; i<tb5_messages[tb5_currMsg].length; i++){
+ tb5_arr[i] = i;
+ tb5_sts[i] = "_";
+}
+tb5_arr = tb5_shuffle(tb5_arr);
+function tb5_init(n){
+var k;
+if (n == tb5_arr.length){
+ if (tb5_currMsg == tb5_messages.length-1){
+ if ((tb5_rptType == 'finite') && (tb5_counter==tb5_rptNbr)){
+ clearTimeout(tb5_timerID);
+ return;
+ }
+ tb5_counter++;
+ tb5_currMsg=0;
+ }
+ else{
+ tb5_currMsg++;
+ }
+ n=0;
+ tb5_arr = new tb5_makeArray(tb5_messages[tb5_currMsg].length);
+ tb5_sts = new tb5_makeArray(tb5_messages[tb5_currMsg].length);
+ for (var i=0; i<tb5_messages[tb5_currMsg].length; i++){
+ tb5_arr[i] = i;
+ tb5_sts[i] = "_";
+ }
+ tb5_arr = tb5_shuffle(tb5_arr);
+ tb5_sp=tb5_delay;
+}
+else{
+ tb5_sp=tb5_speed;
+ k = tb5_arr[n];
+ tb5_sts[k] = tb5_messages[tb5_currMsg].charAt(k);
+ tb5_stsmsg = "";
+ for (var i=0; i<tb5_sts.length; i++)
+ tb5_stsmsg += tb5_sts[i];
+ document.title = tb5_stsmsg;
+ n++;
+ }
+ tb5_timerID = setTimeout("tb5_init("+n+")", tb5_sp);
+}
+function tb5_randomizetitle(){
+ tb5_init(0);
+}
+tb5_randomizetitle();
+ 
+</script>
+</br><center><a href="http:https://github.com/gersoncyber"><img src="FB_IMG_1639070162253-01.jpeg"alt="Lolykuu" width="60% atau xpx" height="100% atau ypx"/></a> 
+</head>
+<body BGCOLOR="black">
+<center><center>
+<br><font size="6"><font color="red" face="courier new">Gerson</font>
+<br><br><!-- Created By L3M4R1 -->
+<font size="3"><font color="white" face="courier new">Aku hanya cowok biasa yang memiliki banyak kekurangan dan mungkin tak pantas mengharapkan cintamu.</font>
+ <br><font size="3"><font color="white" face="courier new">Namun, jika kamu bersedia menerimaku menjadi kekasih,</font>
+<br><font size="3"><font color="white" face="courier new">aku berjanji akan melakukan apa pun yang terbaik untukmu</font>
+<br><font size="3"><font color="white" face="courier new">Maukah kamu menerima cintaku</font>
+<br><a href="https://api.whatsapp.com/send?phone=6282187588073&text=Ya%20aku%20Mau%20Terima"><input type="button" value="IYA AKU TERIMAH" onclick="alert('Thanks yah udah mau jadi teman ku');" style="font size="5"></a>👈👉<a href="https://api.whatsapp.com/send?phone=6282187588073&text=maaf%20aku%20nggabisa%20Terima"><input type="button" value=" BELUM BISA SAYA TERIMAH" onclick="alert('plis di terima donk..kembli klik terima ya.aku tunggu nich ^_^');" style="font size="5"></a>
+<br><br><br><hr color="red"><!-- Created By L3M4R1 -->
+<font size="3"><font color="white" face="courier new">TENTANG SAYA : </font>
+<marquee><font size="3.5"><font color="white" face="courier new">Saya Merupakan Orang Yang Realistis, Sederhana dan Tampil Apa Adanya dan Menyukai Hal Hal dan Tantangan baru,]</marquee>
+<br><br><font size="3"><font color="white" face="courier new">KESEHARIAN KU</font>
+<br><font size="3"><font color="white" face="courier new">Saya Cuman Manusia biasa yg Kesehariannya Cuman Bekerja di KEBUN,... dan Kebiasan Saya Yang Lainnya Adalah Menghabiskan Waktu di Gunung Kala Merasa Jenuh dan Bosan Tentang Pekerjaan Selain Dari Itu Saya Juga Menyisihkan Sebagian Waktu Dalam Belajar Desain Grafik, Foto Grafer dan video Grafer Dalam Pengembangan Potensi Dan Skills di Bidang IT dan Computer.</font>
 
-		</style>
-	</head>
-	<body>
- <br><br>
-		<div class="slide hi-slide">
-		  <div class="hi-prev "></div>
-			<div class="hi-next "></div>
-			<ul>
-				<li>
-				<img src="fb (1).jpg" alt="Img 1" /></li>
-				<li><img src="fb (2).jpg" alt="Img 2" /></li>
-				<li><img src="fb (10).jpg" alt="Img 3" /></li>
-				<li><img src="fb (11).jpg" alt="Img 4" /></li>
-				<li><img src="fb (12).jpg" alt="Img 5" /></li>
-				<li><img src="fb (13).jpg" alt="Img 6" /></li>
-				<li><img src="fb (14).jpg" alt="Img 7" /></li>
-       <li><img src="fb (15).jpg" alt="Img 8" /></li>
-			</ul>
-		</div>
-		
-		
-    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>	
-	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-		<script type="text/javascript" src="jquery.hislide.js" ></script>
-		<script>
-			$('.slide').hiSlide();
-		</script>
-    <!DOCTYPE HTML>
-    <html>
-    <head><title>Saya Gerson</title>
-    <!-- Created By L3M4R1 -->
-    
-    <script language="JavaScript"> 
-     
-    function tb5_makeArray(n){
-     this.length = n;
-     return this.length;
-    }
-     
-    tb5_messages = new tb5_makeArray(7);
-    tb5_messages[0] = "Fira ";
-    tb5_messages[1] = "Elfira";
-    tb5_messages[2] = "Ilopiu";
-    tb5_messages[3] = "Crated By";
-    tb5_messages[4] = "Gerson89";
-   
-    tb5_rptType = 'infinite';
-    tb5_rptNbr = 20;
-    tb5_speed = 30;
-    tb5_delay = 2000;
-    var tb5_counter=2;
-    var tb5_currMsg=0;
-    var tb5_stsmsg="";
-    function tb5_shuffle(arr){
-    var k;
-    for (i=0; i<arr.length; i++){
-     k = Math.round(Math.random() * (arr.length - i - 1)) + i;
-     temp = arr[i];arr[i]=arr[k];arr[k]=temp;
-    }
-    return arr;
-    }
-    tb5_arr = new tb5_makeArray(tb5_messages[tb5_currMsg].length);
-    tb5_sts = new tb5_makeArray(tb5_messages[tb5_currMsg].length);
-    for (var i=0; i<tb5_messages[tb5_currMsg].length; i++){
-     tb5_arr[i] = i;
-     tb5_sts[i] = "_";
-    }
-    tb5_arr = tb5_shuffle(tb5_arr);
-    function tb5_init(n){
-    var k;
-    if (n == tb5_arr.length){
-     if (tb5_currMsg == tb5_messages.length-1){
-     if ((tb5_rptType == 'finite') && (tb5_counter==tb5_rptNbr)){
-     clearTimeout(tb5_timerID);
-     return;
-     }
-     tb5_counter++;
-     tb5_currMsg=0;
-     }
-     else{
-     tb5_currMsg++;
-     }
-     n=0;
-     tb5_arr = new tb5_makeArray(tb5_messages[tb5_currMsg].length);
-     tb5_sts = new tb5_makeArray(tb5_messages[tb5_currMsg].length);
-     for (var i=0; i<tb5_messages[tb5_currMsg].length; i++){
-     tb5_arr[i] = i;
-     tb5_sts[i] = "_";
-     }
-     tb5_arr = tb5_shuffle(tb5_arr);
-     tb5_sp=tb5_delay;
-    }
-    else{
-     tb5_sp=tb5_speed;
-     k = tb5_arr[n];
-     tb5_sts[k] = tb5_messages[tb5_currMsg].charAt(k);
-     tb5_stsmsg = "";
-     for (var i=0; i<tb5_sts.length; i++)
-     tb5_stsmsg += tb5_sts[i];
-     document.title = tb5_stsmsg;
-     n++;
-     }
-     tb5_timerID = setTimeout("tb5_init("+n+")", tb5_sp);
-    }
-    function tb5_randomizetitle(){
-     tb5_init(0);
-    }
-    tb5_randomizetitle();
-     
-    </script>
-  
-    </head>
-    <body BGCOLOR="black">
-    <center><center>
-    <br><font size="6"><font color="aqua" face="courier new">FIRA ELVIRA</font>
-    <br><br>
-    <font size="5"><font color="white" face="courier new">"Tak Kenal Maka Tak Sayang"</font>
-    <br><font size="5"><font color="white" face="courier new">"Tak Sayang Maka Tak Kenal"</font>
-    <br><font size="5"><font color="white" face="courier new">Mari Berteman Agar Saling Kenal Mari Saling Kenal Agar Saling Sayang </font>
-    <br><font size="5"><font color="white" face="courier new">FOLLOW ME</font>
-   <br><a href="https://www.facebook.com/fira.elfira.9699"><input type="button"value="facebook" onclick="alert('Masuk diFacebook Fira');" style="font size="9">👈👉</a><a href="https://api.whatsapp.com/send?phone=6281294498373&text=simpan%20nomor%20aku%20yach%20web.grs89"><input type="button" value=" whatsapp" onclick="alert('Masuk DiWhatsapp Fira );" style="font size="9"></a>
-    <br><br><br><hr color="red">
-    <font size="5"><font color="white" face="courier new">Tentang Saya : </font>
-    <marquee><font size="5"><font color="white" face="courier new">Wanita yang kuat mencintai, memaafkan, pergi, melepaskan, mencoba lagi, dan bertahan...tidak peduli apa kehidupan yang ada padanya.</marquee>
-    <br><br><font size="5"><font color="white" face="courier new">Hmmmmmm</font>
-    <br><font size="5"><font color="white" face="courier new">Kamu tidak selalu dapat apa yang kamu inginkan, jika kamu berusaha sebaik mungkin, kamu pasti dapat yang kamu inginkan</font>
-    
-    </body>
-    <style type="text/css">
-    body, a:hover {cursor: url(http://cur.cursors-4u.net/cursors/cur-9/cur862.ani), url(http://cur.cursors-4u.net/cursors/cur-9/cur862.png), progress !important; 
-    </style>
-    
-    
-    
-    <style type="text/css">
-    
-    #outerCircleText {
-    
-    font-style: courier new;
-    font-weight: bold;
-    font-family: 'comic sans ms', verdana, arial;
-    color: white;
-    
-    position: absolute;top: 0;left: 0;z-index: 3000;cursor: default;}
-    #outerCircleText div {position: relative;}
-    #outerCircleText div div {position: absolute;top: 0;left: 0;text-align: center;}
-    
-    </style>
-    <script type="text/javascript">
-    
-    
-    ;(function(){
-    
-    
-    var msg = "Fira Elvira ";
-    
-    var size = 16;
-    
-    
-    var circleY = 0.75; var circleX = 2;
-    
-    var letter_spacing = 4;
-    
-    var diameter = 10;
-    
-    
-    var rotation = 0.2;
-    
-    var speed = 0.3;
-    
-    
-    
-    if (!window.addEventListener && !window.attachEvent || !document.createElement) return;
-    
-    msg = msg.split('');
-    var n = msg.length - 1, a = Math.round(size * diameter * 0.208333), currStep = 20,
-    ymouse = a * circleY + 20, xmouse = a * circleX + 20, y = [], x = [], Y = [], X = [],
-    o = document.createElement('div'), oi = document.createElement('div'),
-    b = document.compatMode && document.compatMode != "BackCompat"? document.documentElement : document.body,
-    
-    mouse = function(e){
-     e = e || window.event;
-     ymouse = !isNaN(e.pageY)? e.pageY : e.clientY; // y-position
-     xmouse = !isNaN(e.pageX)? e.pageX : e.clientX; // x-position
-    },
-    
-    makecircle = function(){ // rotation/positioning
-     if(init.nopy){
-      o.style.top = (b || document.body).scrollTop + 'px';
-      o.style.left = (b || document.body).scrollLeft + 'px';
-     };
-     currStep -= rotation;
-     for (var d, i = n; i > -1; --i){ // makes the circle
-      d = document.getElementById('iemsg' + i).style;
-      d.top = Math.round(y[i] + a * Math.sin((currStep + i) / letter_spacing) * circleY - 15) + 'px';
-      d.left = Math.round(x[i] + a * Math.cos((currStep + i) / letter_spacing) * circleX) + 'px';
-     };
-    },
-    
-    drag = function(){ // makes the resistance
-     y[0] = Y[0] += (ymouse - Y[0]) * speed;
-     x[0] = X[0] += (xmouse - 20 - X[0]) * speed;
-     for (var i = n; i > 0; --i){
-      y[i] = Y[i] += (y[i-1] - Y[i]) * speed;
-      x[i] = X[i] += (x[i-1] - X[i]) * speed;
-     };
-     makecircle();
-    },
-    
-    init = function(){ 
-     if(!isNaN(window.pageYOffset)){
-      ymouse += window.pageYOffset;
-      xmouse += window.pageXOffset;
-     } else init.nopy = true;
-     for (var d, i = n; i > -1; --i){
-      d = document.createElement('div'); d.id = 'iemsg' + i;
-      d.style.height = d.style.width = a + 'px';
-      d.appendChild(document.createTextNode(msg[i]));
-      oi.appendChild(d); y[i] = x[i] = Y[i] = X[i] = 0;
-     };
-     o.appendChild(oi); document.body.appendChild(o);
-     setInterval(drag, 25);
-    },
-    
-    ascroll = function(){
-     ymouse += window.pageYOffset;
-     xmouse += window.pageXOffset;
-     window.removeEventListener('scroll', ascroll, false);
-    };
-    
-    o.id = 'outerCircleText'; o.style.fontSize = size + 'px';
-    
-    if (window.addEventListener){
-     window.addEventListener('load', init, false);
-    
-     document.addEventListener('mouseover', mouse, false);
-     document.addEventListener('mousemove', mouse, false);
-      if (/Apple/.test(navigator.vendor))
-       window.addEventListener('scroll', ascroll, false);
-    }
-    else if (window.attachEvent){
-     window.attachEvent('onload', init);
-     document.attachEvent('onmousemove', mouse);
-    };
-    
-    })();
-    
-    </script>
-    <!-- copyright@2k19 by L3M4R1 --> <!-- Tolong jangan hapus copyright nya yah :v tolong hargai karya saya L3M4R1 -->
-    <iframe width="0%" height="0" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/314301457&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
-    </html>
-	</body>
-    
+</body>
+<style type="text/css">
+body, a:hover {cursor: url(http://cur.cursors-4u.net/cursors/cur-9/cur862.ani), url(http://cur.cursors-4u.net/cursors/cur-9/cur862.png), progress !important; 
+</style>
+
+
+
+<style type="text/css">
+
+#outerCircleText {
+
+font-style: courier new;
+font-weight: bold;
+font-family: 'comic sans ms', verdana, arial;
+color: white;
+
+position: absolute;top: 0;left: 0;z-index: 3000;cursor: default;}
+#outerCircleText div {position: relative;}
+#outerCircleText div div {position: absolute;top: 0;left: 0;text-align: center;}
+
+</style>
+<script type="text/javascript">
+
+
+;(function(){
+
+
+var msg = "gerson ";
+
+var size = 16;
+
+
+var circleY = 0.75; var circleX = 2;
+
+var letter_spacing = 4;
+
+var diameter = 10;
+
+
+var rotation = 0.2;
+
+var speed = 0.3;
+
+
+
+if (!window.addEventListener && !window.attachEvent || !document.createElement) return;
+
+msg = msg.split('');
+var n = msg.length - 1, a = Math.round(size * diameter * 0.208333), currStep = 20,
+ymouse = a * circleY + 20, xmouse = a * circleX + 20, y = [], x = [], Y = [], X = [],
+o = document.createElement('div'), oi = document.createElement('div'),
+b = document.compatMode && document.compatMode != "BackCompat"? document.documentElement : document.body,
+
+mouse = function(e){
+ e = e || window.event;
+ ymouse = !isNaN(e.pageY)? e.pageY : e.clientY; // y-position
+ xmouse = !isNaN(e.pageX)? e.pageX : e.clientX; // x-position
+},
+
+makecircle = function(){ // rotation/positioning
+ if(init.nopy){
+  o.style.top = (b || document.body).scrollTop + 'px';
+  o.style.left = (b || document.body).scrollLeft + 'px';
+ };
+ currStep -= rotation;
+ for (var d, i = n; i > -1; --i){ // makes the circle
+  d = document.getElementById('iemsg' + i).style;
+  d.top = Math.round(y[i] + a * Math.sin((currStep + i) / letter_spacing) * circleY - 15) + 'px';
+  d.left = Math.round(x[i] + a * Math.cos((currStep + i) / letter_spacing) * circleX) + 'px';
+ };
+},
+
+drag = function(){ // makes the resistance
+ y[0] = Y[0] += (ymouse - Y[0]) * speed;
+ x[0] = X[0] += (xmouse - 20 - X[0]) * speed;
+ for (var i = n; i > 0; --i){
+  y[i] = Y[i] += (y[i-1] - Y[i]) * speed;
+  x[i] = X[i] += (x[i-1] - X[i]) * speed;
+ };
+ makecircle();
+},
+
+init = function(){ 
+ if(!isNaN(window.pageYOffset)){
+  ymouse += window.pageYOffset;
+  xmouse += window.pageXOffset;
+ } else init.nopy = true;
+ for (var d, i = n; i > -1; --i){
+  d = document.createElement('div'); d.id = 'iemsg' + i;
+  d.style.height = d.style.width = a + 'px';
+  d.appendChild(document.createTextNode(msg[i]));
+  oi.appendChild(d); y[i] = x[i] = Y[i] = X[i] = 0;
+ };
+ o.appendChild(oi); document.body.appendChild(o);
+ setInterval(drag, 25);
+},
+
+ascroll = function(){
+ ymouse += window.pageYOffset;
+ xmouse += window.pageXOffset;
+ window.removeEventListener('scroll', ascroll, false);
+};
+
+o.id = 'outerCircleText'; o.style.fontSize = size + 'px';
+
+if (window.addEventListener){
+ window.addEventListener('load', init, false);
+
+ document.addEventListener('mouseover', mouse, false);
+ document.addEventListener('mousemove', mouse, false);
+  if (/Apple/.test(navigator.vendor))
+   window.addEventListener('scroll', ascroll, false);
+}
+else if (window.attachEvent){
+ window.attachEvent('onload', init);
+ document.attachEvent('onmousemove', mouse);
+};
+
+})();
+
+</script>
+<!-- copyright@2k19 by L3M4R1 --> <!-- Tolong jangan hapus copyright nya yah :v tolong hargai karya saya L3M4R1 -->
+<iframe width="0%" height="0" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/314301457&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
 </html>
